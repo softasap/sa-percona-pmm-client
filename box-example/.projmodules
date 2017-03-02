@@ -1,0 +1,4 @@
+[submodule "roles/sa-percona-pmm-client"]
+        path = roles/sa-percona-pmm-client
+        url = https://github.com/softasap/sa-percona-pmm-client.git
+

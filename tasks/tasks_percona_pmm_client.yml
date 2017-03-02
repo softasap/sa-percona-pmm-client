@@ -1,0 +1,33 @@
+---
+  # Parameters:
+
+  - name: Percona PMM | Obtaining percona public key
+    apt_key: keyserver=keyserver.ubuntu.com id=8507EFA5
+    become: yes
+    tags:
+      - pmm
+
+    #apt-key adv --keyserver keys.gnupg.net --recv-keys 8507EFA5 or
+    #apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 8507EFA5
+
+  - name: Percona PMM | Add Debian apt repository
+    apt_repository: repo="deb http://repo.percona.com/apt {{ansible_distribution_release}} main"
+    when: ansible_os_family == "Debian"
+    become: yes
+    tags:
+      - pmm
+
+  - name: Percona PMM | Add Debian apt repository
+    apt_repository: repo="deb-src http://repo.percona.com/apt {{ansible_distribution_release}} main"
+    when: ansible_os_family == "Debian"
+    become: yes
+    tags:
+      - pmm
+
+  - name: Percona PMM | Install pmm-client
+    apt: update-cache=yes force=yes state=present pkg="pmm-client"
+    when: ansible_os_family == "Debian"
+    become: yes
+    tags:
+      - pmm
+

@@ -1,0 +1,3 @@
+---
+# tasks file for sa-percona-pmm-client
+  - include: tasks_percona_pmm_client.yml
