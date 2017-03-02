@@ -15,12 +15,17 @@ However, if you want to leverage the full potential of PMM, internal structure i
 
 PMM Client packages consist of the following:
 
-pmm-admin is a command-line tool for managing PMM Client, for example, adding and removing database instances that you want to monitor. For more information, see Managing PMM Client.
-percona-qan-agent is a service that manages the Query Analytics (QAN) agent as it collects query performance data. It also connects with QAN API in PMM Server and sends over collected data.
-node_exporter is a Prometheus exporter that collects general system metrics. For more information, see https://github.com/prometheus/node_exporter.
-mysqld_exporter is a Prometheus exporter that collects MySQL server metrics. For more information, see https://github.com/percona/mysqld_exporter.
-mongodb_exporter is a Prometheus exporter that collects MongoDB server metrics. For more information, see https://github.com/percona/mongodb_exporter.
-proxysql_exporter is a Prometheus exporter that collects ProxySQL performance metrics. For more information, see https://github.com/percona/proxysql_exporter.
+`pmm-admin` is a command-line tool for managing PMM Client, for example, adding and removing database instances that you want to monitor. For more information, see Managing PMM Client.
+
+`percona-qan-agent` is a service that manages the Query Analytics (QAN) agent as it collects query performance data. It also connects with QAN API in PMM Server and sends over collected data.
+
+`node_exporter` is a Prometheus exporter that collects general system metrics. For more information, see https://github.com/prometheus/node_exporter.
+
+`mysqld_exporter` is a Prometheus exporter that collects MySQL server metrics. For more information, see https://github.com/percona/mysqld_exporter.
+
+`mongodb_exporter` is a Prometheus exporter that collects MongoDB server metrics. For more information, see https://github.com/percona/mongodb_exporter.
+
+`proxysql_exporter` is a Prometheus exporter that collects ProxySQL performance metrics. For more information, see https://github.com/percona/proxysql_exporter.
 
 Simple Scenario
 If you have just one MySQL or MongoDB server, you can install and run both modules (PMM Client and PMM Server) on this one database host.
